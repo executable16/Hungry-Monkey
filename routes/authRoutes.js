@@ -17,7 +17,7 @@ const authRouter = (app) => {
         res.send(req.user);
     })
 
-    app.get('/hello', (req,res) => {
+    app.get('/', (req,res) => {
         res.send({
             message : 'Hello World',
             date : new Date(),
