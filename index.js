@@ -9,7 +9,8 @@ import keys from './config/keys.js'
 import cookieSession from 'cookie-session';
 
 
-mongoose.connect(keys.mongoURI,{ useNewUrlParser: true , useUnifiedTopology: true })
+mongoose.connect(keys.mongoURI)
+//,{ useNewUrlParser: true , useUnifiedTopology: true })
 
 const app = express();
 
