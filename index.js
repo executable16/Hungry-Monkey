@@ -1,11 +1,13 @@
 import express from 'express'
 import authRouter from './routes/authRoutes.js'
-import passport from 'passport'
 import mongoose from 'mongoose'
-import keys from './config/keys.js'
-import './models/user.js'
 import './services/passport.js'
+import './models/User.js'
+
+import passport from 'passport'
+import keys from './config/keys.js'
 import cookieSession from 'cookie-session';
+
 
 mongoose.connect(keys.mongoURI,{ useNewUrlParser: true , useUnifiedTopology: true })
 

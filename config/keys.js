@@ -1,14 +1,19 @@
-import productionKey from './production.js'
-import developmentKey from './development.js'
+/* Development Keys*/
 
-/*Hell wrong*/
-let exportedKey = null;
+/*
+import keys from './development.js'
+console.log(keys)
+export default keys
+*/
 
-if(process.env.NODE_ENV === 'production'){
-    exportedKey = productionKey
-}
-else{
-   exportedKey = developmentKey
-}
+/*-------------------------------------------------------------------------------------------------------*/
 
-export default exportedKey
+
+
+/* Production Keys */
+
+
+
+import keys from './production.js'
+export default keys
+
