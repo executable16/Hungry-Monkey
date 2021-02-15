@@ -5,5 +5,5 @@ const keys = {
     cookieKey : process.env.COOKIE_KEY
 }
 
-export default keys;
+module.exports = keys;
 

@@ -1,4 +1,6 @@
-import passport from 'passport'
+// import passport from 'passport'
+
+const passport = require('passport')
 
 const authRouter = (app) => {
     
@@ -25,4 +27,4 @@ const authRouter = (app) => {
     })
 }
 
-export default authRouter;
+module.exports = authRouter;
