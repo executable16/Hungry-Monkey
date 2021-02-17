@@ -1,18 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import React , {Component} from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a href = "/auth/google">Sign In With Google</a>
-      </header>
-    </div>
-  );
+class App extends Component{
+  render(){
+    return(
+      <div>
+        Hello Mate !
+      </div>
+    )
+  }
 }
 
 export default App;
