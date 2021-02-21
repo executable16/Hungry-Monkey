@@ -8,11 +8,16 @@ const authRouter = (app) => {
         scope : ['profile', 'email']
     }));
     
-    app.get('/auth/google/callback',passport.authenticate('google'));
+    app.get('/auth/google/callback',
+        passport.authenticate('google'),
+        (req, res) => {
+            res.redirect('/dashboard')
+        }
+    );
 
     app.get('/api/logout', (req,res) => {
         req.logout()
-        res.send(req.user)
+        res.redirect('/')
     })
     
     app.get('/api/currentuser', (req,res) => {
@@ -22,7 +27,6 @@ const authRouter = (app) => {
     app.get('/', (req,res) => {
         res.send({
             message : 'Hello World Updated',
-            // date : new Date(),
         })
     })
 }
