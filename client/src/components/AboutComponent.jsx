@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './css/HomeComponent.css'
+import './css/AboutComponent.css'
 
 const homeAlign = {
     
@@ -7,23 +7,21 @@ const homeAlign = {
     color : `purple`
 };
 
-class HomeComponent extends Component {
+class AboutComponent extends Component {
     render() {
         return (
-            <div style = {homeAlign} id = "grad1">
+            <div style = {homeAlign} id = "grad5">
                 <div >
                     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-                    <h2>Hungry Monkey</h2>
                     <div>
-                        <h4>Collect feedback from your users</h4>
-                        
+                        <h3>About us</h3>
                     </div>
                     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-                    <br /><br />
+                    <br /><br /><br /><br />
                 </div>
             </div>
         )
     }
 }
 
-export default HomeComponent
+export default AboutComponent

@@ -6,7 +6,8 @@ import HomeComponent from './HomeComponent'
 import DashboardComponent from './DashboardComponent'
 import CreditComponent from './CreditComponent'
 import AddCreditComponent from './AddCreditComponent'
-
+import AboutComponent from './AboutComponent'
+import ErrorComponent from './ErrorComponent'
 
 class RootComponent extends Component{
   render(){
@@ -20,6 +21,8 @@ class RootComponent extends Component{
             <Route exact path = "/dashboard" component = {DashboardComponent} />
             <Route exact path = "/credit" component = {CreditComponent} />
             <Route exact path = "/addcredit" component = {AddCreditComponent} />
+            <Route exact path = "/about" component = {AboutComponent} />
+            <Route component = {ErrorComponent} />
           </Switch>
         </Router>
       </div>

@@ -11,7 +11,6 @@ import {connect} from 'react-redux'
 
 import '../components/css/HeaderComponent.css'
 
-
 class HeaderComponent extends Component {
 
     renderContent(){
@@ -25,6 +24,7 @@ class HeaderComponent extends Component {
                  
             default :
                 return <li><a className = "nav-link active " href = "/api/logout">Logout</a></li> 
+                
         }
     }
 
@@ -42,27 +42,23 @@ class HeaderComponent extends Component {
                                 <li className="nav-item">
                                 <Link className="nav-link active" aria-current="page" to="/home">Home</Link>
                                 </li>
-                                <li className="nav-item">
+                                {this.props.auth && <li className="nav-item">
                                 <Link className="nav-link active" aria-current="page" to="/dashboard">Dashboard</Link>
-                                </li>
+                                </li>}
+                                {this.props.auth && <li className="nav-item">
+                                <Link className="nav-link active" aria-current="page" to="/credit">Credits : {this.props.auth.credits}</Link>
+                                </li>}
+                                {this.props.auth && <li className="nav-item">
+                                <Link className="nav-link active" aria-current="page" to="/addcredit">Add Credit</Link>
+                                </li>}
                                 <li className="nav-item">
-                                <Link className="nav-link active" aria-current="page" to="/credit">Credits</Link>
-                                </li>
-                                <li className="nav-item">
-                                <Link className="nav-link active" aria-current="page" to="/addcredit">Add Credits</Link>
-                                </li>
-                                <li className="nav-item">
-                                <Link className="nav-link active" aria-current="page" to="/addcredit">About us</Link>
+                                <Link className="nav-link active" aria-current="page" to="/about">About us</Link>
                                 </li>
                             </ul>
                             <ul className = "navbar-nav">
                                 <li className = "nav-item">
                                     {this.renderContent()}
-                                {/* <Link className = "nav-link active " to = "/">{this.renderContent()}</Link> */}
                                 </li>
-                                {/* <li>
-                                <Link className = "nav-link active" to = "/">Logout</Link>
-                                </li> */}
                             </ul>
                         </div>
                     </div>
