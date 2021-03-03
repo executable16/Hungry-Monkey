@@ -17,6 +17,7 @@ const keys = require('./config/keys')
 const bodyParser = require('body-parser')
 require('./models/User')
 require('./services/passport')
+require('./models/Survey')
 
 mongoose.connect(keys.mongoURI,{ useNewUrlParser: true , useUnifiedTopology: true })
 
