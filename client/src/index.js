@@ -20,6 +20,9 @@ import App from './App';
   There should only be a single store in your app.
 */
 
+import axios from 'axios'
+window.axios = axios;
+
 const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
 
 ReactDOM.render(

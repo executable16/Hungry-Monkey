@@ -6,6 +6,6 @@ const recipientSchema = new Schema({
     responded : { type : Boolean, default : false }
 })
 
-mongoose.model('recipient', recipientSchama)
+mongoose.model('recipient', recipientSchema)
 
 module.exports = recipientSchema
