@@ -8,6 +8,7 @@ import CreditComponent from './CreditComponent'
 import AddCreditComponent from './AddCreditComponent'
 import AboutComponent from './AboutComponent'
 import ErrorComponent from './ErrorComponent'
+import SurveyNew from './surveys/SurveyNew'
 
 class RootComponent extends Component{
   render(){
@@ -22,6 +23,7 @@ class RootComponent extends Component{
             <Route exact path = "/credit" component = {CreditComponent} />
             <Route exact path = "/addcredit" component = {AddCreditComponent} />
             <Route exact path = "/about" component = {AboutComponent} />
+            <Route exact path = "/surveys/new" component = {SurveyNew} />
             <Route component = {ErrorComponent} />
           </Switch>
         </Router>

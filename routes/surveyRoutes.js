@@ -21,15 +21,10 @@ module.exports = app => {
 
         try {
             await sendMail(survey)
-
             await survey.save();
-
             req.user.credits -=1 ;
-
             const user = await req.user.save();
-
             res.send(user);
-
         }catch(err){
             res.status(422).send(err);
         }
@@ -39,6 +34,12 @@ module.exports = app => {
     app.get('/api/surveys', (req, res) => {
         res.send('<h1>Hey ! Thanks for your feedback</h1>')
     })
+
+
+    app.post('/api/surveys/webhooks', (req, res) => {
+        console.log(req.body)
+        res.send({});
+    });
 
 }
 

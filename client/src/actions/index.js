@@ -8,7 +8,6 @@ export const fetchUser = () => {
     return async (dispatch) => {
         try{
             const res = await axios.get('/api/currentuser')
-            console.log("Called : Fetch User")
             dispatch({type : FETCH_USER, payload : res.data})
         }catch(err){
             console.log("Dispatching User Authentication info failed")
@@ -21,11 +20,28 @@ export const handleToken = (token) => {
     return async (dispatch) => {
         try{
             const res = await axios.post('/api/stripe',token)
-            console.log("Called : Handle Token")
-            dispatch({type : FETCH_USER,payload : res.data})
+            dispatch({type : FETCH_USER,payload : res.data});
         }catch(err){
             console.log("Dispatching Handle Token Failed")
         }
     }
 }
 
+export const submitSurvey = (values, history) => {
+        return async (dispatch) => {
+            try{
+                const res = await axios.post('/api/surveys',values);
+                history.push('/home')
+                dispatch({type : FETCH_USER,payload : res.data});
+                
+                
+            }catch(err){
+                console.log("Error at survey submit !")
+            }
+        }
+};
+
+// export const submitSurvey = values => async dispatch => {
+//     const res = await axios.post('/api/surveys',values);
+//     dispatch({type : FETCH_USER,payload : res.data});
+// }

@@ -8,13 +8,13 @@
 // import keys from './config/keys.js'
 // import cookieSession from 'cookie-session';
 
-
 const express = require('express')
 const mongoose = require('mongoose')
 const cookieSession = require('cookie-session')
 const passport = require('passport')
 const keys = require('./config/keys')
 const bodyParser = require('body-parser')
+
 require('./models/User')
 require('./services/passport')
 require('./models/Survey')
@@ -30,10 +30,8 @@ app.use(cookieSession({
    keys : [keys.cookieKey]
 }))
 
-
 app.use(passport.initialize())
 app.use(passport.session())
-
 
 require('./routes/authRoutes')(app)
 require('./routes/billingRoutes')(app)
