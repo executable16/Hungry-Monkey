@@ -22,7 +22,7 @@ function SurveyFormReview({ onCancel , formValues, submitSurvey, history}) {
             <h5>Please confirm your enteries</h5>
             {reviewFields}
             <button className = "btn btn-warning btn-lg" onClick = {onCancel}>Back</button>
-            <button className = "btn btn-success btn-lg float-end" onClick = {actions.submitSurvey(formValues, history)}> Send Survey</button>
+            <button className = "btn btn-success btn-lg float-end" onClick = { () => submitSurvey(formValues, history)}> Send Survey</button>
         </div>
     )
     
