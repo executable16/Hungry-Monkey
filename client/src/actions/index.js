@@ -1,5 +1,5 @@
 import axios from 'axios'
-import {FETCH_USER} from './types'
+import {FETCH_USER, FETCH_SURVEYS} from './types'
 
 
 /* Dispatch a suitable action according to the requirement */
@@ -40,6 +40,17 @@ export const submitSurvey = (values, history) => {
             }
         }
 };
+
+export const fetchSurveys = () => {
+    return async (dispatch) => {
+        try {
+            const res = await axios.get('/api/surveys');
+            dispatch({type : FETCH_SURVEYS, payload : res.data});
+        }catch(err){
+            console.log('Error at fetching surveys (DISPATCHER)');
+        }
+    }
+}
 
 // export const submitSurvey = values => async dispatch => {
 //     const res = await axios.post('/api/surveys',values);
