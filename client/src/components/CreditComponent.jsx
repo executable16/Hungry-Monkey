@@ -15,7 +15,7 @@ class CreditComponent extends Component {
                 
                 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
-                <h1>Hello Credit</h1><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <h1>You seem to be liking our product. Add more credits to enjoy our service !</h1><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
                 <br /><br /><br /><br /><br />
             </div>
         )
